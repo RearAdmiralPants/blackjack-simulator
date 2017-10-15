@@ -2,6 +2,7 @@
 {
     using System;
 
+    // NOTE: This class is now deprecated.
     public class AceValue
     {
         public int Value { get; private set; }
