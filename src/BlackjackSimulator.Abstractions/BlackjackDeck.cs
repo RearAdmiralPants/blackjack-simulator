@@ -18,6 +18,11 @@ namespace BlackjackSimulator.Abstractions
             }
         }
 
+        public void Shuffle()
+        {
+
+        }
+
         private void Initialize()
         {
             foreach (var typedSuit in Enum.GetValues(typeof(Suit)).Cast<Suit>())

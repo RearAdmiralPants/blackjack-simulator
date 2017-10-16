@@ -4,5 +4,7 @@
     public abstract class CardDeck
     {
         public List<PlayingCard> Cards { get; private set; } = new List<PlayingCard>();
+
+        public abstract void Shuffle();
     }
 }
