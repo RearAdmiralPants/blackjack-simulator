@@ -1,0 +1,4 @@
+- A "perfect" shuffle is when the first card is exchanged with the last card; the second card is exchanged with the second last, etc.; it is a 100% reversible operation and it is relied upon by magicians everywhere.
+    While it may be educational to implement such a shuffle, the simulation value would be low to nonexistent.
+
+- Describe the process of a properly randomized shuffle as follows:
