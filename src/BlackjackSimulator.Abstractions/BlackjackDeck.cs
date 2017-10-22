@@ -44,6 +44,30 @@ namespace BlackjackSimulator.Abstractions
                     iterTest = 20;
                 }
             }
+
+            PlayingCard toTest = null;
+            var sameCard = 0;
+            for (var iterRand = 0; iterRand < 1000; iterRand++)
+            {
+                this.ResetDeck();
+                this.Initialize();
+                this.Shuffle();
+
+                var firstCard = this.GetCards(1);
+                if (toTest == null)
+                {
+                    toTest = firstCard[0];
+                }
+                else
+                {
+                    if (toTest.Equals(firstCard[0]))
+                    {
+                        sameCard++;
+                    }
+                }
+            }
+
+            System.Diagnostics.Debug.WriteLine("After 1,000 shuffles, we saw the same first card (" + toTest.ToString() + ") " + sameCard + " times.");
         }
 
 

@@ -13,6 +13,8 @@
 
         private List<PlayingCard> Cards = new List<PlayingCard>();
 
+        private Random randomGen = new Random();
+
         public void ResetDeck()
         {
             this.penetration = 0;
@@ -27,10 +29,10 @@
             lock (this.Cards)
             {
                 var shuffledDeck = new List<PlayingCard>();
-                var randomGen = new Random();
+                
                 while (this.Cards.Any())
                 {
-                    var randomIndex = randomGen.Next(0, this.Cards.Count - 1);
+                    var randomIndex = this.randomGen.Next(0, this.Cards.Count - 1);
                     shuffledDeck.Add(this.Cards[randomIndex]);
                     this.Cards.RemoveAt(randomIndex);
                 }
