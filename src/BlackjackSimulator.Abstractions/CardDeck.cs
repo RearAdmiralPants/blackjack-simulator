@@ -15,7 +15,7 @@
 
         private Random randomGen = new Random();
 
-        public void ResetDeck()
+        protected void ResetDeck()
         {
             this.penetration = 0;
             this.cardToDeal = 0;

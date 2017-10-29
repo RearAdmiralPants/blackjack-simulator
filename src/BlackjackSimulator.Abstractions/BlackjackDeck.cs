@@ -10,6 +10,8 @@ namespace BlackjackSimulator.Abstractions
     {
         public BlackjackDeck()
         {
+            this.Initialize();
+            /*
             //// TODO: Turn this stuff into unit tests before getting further into these bad habits
             this.Initialize();
             var allCards = this.GetAllRemainingCards();
@@ -69,8 +71,14 @@ namespace BlackjackSimulator.Abstractions
             }
 
             System.Diagnostics.Debug.WriteLine("After 1,000 shuffles, we saw the same first card (" + toTest.ToString() + ") " + sameCard + " times.");
+            */
         }
 
+        public void Reset()
+        {
+            this.ResetDeck();
+            this.Initialize();
+        }
 
         private void Initialize()
         {
