@@ -10,6 +10,7 @@ namespace BlackjackSimulator.Abstractions
     {
         public BlackjackDeck()
         {
+            //// TODO: Turn this stuff into unit tests before getting further into these bad habits
             this.Initialize();
             var allCards = this.GetAllRemainingCards();
             System.Diagnostics.Debug.WriteLine("Cards in deck (unshuffled): " + allCards.Count);

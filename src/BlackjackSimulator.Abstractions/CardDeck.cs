@@ -74,7 +74,6 @@
             cardsToRemove.ForEach(card => this.Cards.Remove(card));
         }
 
-
         public void RemoveCard(PlayingCard cardToRemove)
         {
             this.Cards.Remove(cardToRemove);
