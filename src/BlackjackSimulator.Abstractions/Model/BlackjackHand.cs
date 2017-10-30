@@ -23,7 +23,7 @@
 
         private void Cards_ItemAdded(object sender, EventArgs e)
         {
-            
+            this.CalculateValues();
         }
 
         public bool SingleValue()
