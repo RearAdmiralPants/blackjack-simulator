@@ -13,6 +13,12 @@
         private const int SHUFFLES_TO_TEST_RANDOMNESS = 10000;
         private const double SHUFFLES_RANDOMNESS_ACCEPTABLE_MATCHES = 0.05;
 
+        /// <summary>
+        /// Test the Shuffle() method by ensuring that at least one of the first five cards differs after a shuffle.
+        /// 
+        /// NOTE: There is a small chance that this test will fail due to simple statistics. 
+        /// ////TODO: Find a fix for the above NOTE.
+        /// </summary>
         [TestMethod]
         public void DeckShuffle_CardChanges()
         {
@@ -58,6 +64,12 @@
             Assert.IsFalse(allCardsEqual);
         }
 
+        /// <summary>
+        /// Observes the frequency with which the first card appears the same over a large number of deck shuffles.
+        /// 
+        /// NOTE: There is a small chance that this test will fail due to simple statistics. 
+        /// ////TODO: Find a fix for the above NOTE.
+        /// </summary>
         [TestMethod]
         public void DeckShuffle_CardFrequency()
         {
@@ -84,6 +96,8 @@
             }
 
             double matchFreq = matchCount / Convert.ToDouble(SHUFFLES_TO_TEST_RANDOMNESS);
+
+            System.Diagnostics.Debug.WriteLine("Frequency observed: " + matchFreq);
 
             Assert.IsTrue(matchFreq < SHUFFLES_RANDOMNESS_ACCEPTABLE_MATCHES);
         }
