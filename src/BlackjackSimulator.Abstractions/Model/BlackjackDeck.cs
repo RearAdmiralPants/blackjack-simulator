@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackjackSimulator.Abstractions
+namespace BlackjackSimulator.Abstractions.Model
 {
     public class BlackjackDeck : CardDeck
     {

@@ -2,6 +2,7 @@
 {
     using System;
     using Windows.Graphics.Imaging;
+    using BlackjackSimulator.Abstractions.Model;
     
     /// <summary>
     /// Defines methods for retrieving decorative elements for the game of BlackJack (e.g. cards, suits, etc.).

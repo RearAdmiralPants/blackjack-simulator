@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackSimulator", "BlackjackSimulator\BlackjackSimulator.csproj", "{3404C68B-6646-4E0B-B58B-19F301845DD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackSimulator.UI", "BlackjackSimulator\BlackjackSimulator.UI.csproj", "{3404C68B-6646-4E0B-B58B-19F301845DD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackSimulator.Abstractions", "BlackjackSimulator.Abstractions\BlackjackSimulator.Abstractions.csproj", "{1DE41D5B-4977-452B-996F-4BC35C4F2AB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackSimulator.Test", "..\test\BlackjackSimulator.Test\BlackjackSimulator.Test\BlackjackSimulator.Test.csproj", "{FB973EF6-B556-4BD7-A4A4-540444382C0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0DE0ADDB-EEBC-4BC0-9F28-E0A5A1531176}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0E7214ED-9DF8-49BB-80DC-879FB35164C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,5 +86,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3404C68B-6646-4E0B-B58B-19F301845DD9} = {0DE0ADDB-EEBC-4BC0-9F28-E0A5A1531176}
+		{1DE41D5B-4977-452B-996F-4BC35C4F2AB3} = {0DE0ADDB-EEBC-4BC0-9F28-E0A5A1531176}
+		{FB973EF6-B556-4BD7-A4A4-540444382C0C} = {0E7214ED-9DF8-49BB-80DC-879FB35164C5}
 	EndGlobalSection
 EndGlobal

@@ -13,10 +13,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using BlackjackSimulator.Abstractions;
+using BlackjackSimulator.Abstractions.Model;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace BlackjackSimulator
+namespace BlackjackSimulator.UI
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -31,6 +32,9 @@ namespace BlackjackSimulator
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
             var deck = new BlackjackDeck();
+            deck.Shuffle();
+
+
         }
     }
 }

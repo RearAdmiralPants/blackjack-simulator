@@ -108,11 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackjackAceValue.cs" />
-    <Compile Include="BlackjackDeck.cs" />
-    <Compile Include="CardDeck.cs" />
+    <Compile Include="Model\BlackjackDeck.cs" />
+    <Compile Include="Model\CardDeck.cs" />
     <Compile Include="BlackjackDecorations.cs" />
     <Compile Include="Exceptions\NotEnoughCardsRemainingException.cs" />
-    <Compile Include="PlayingCard.cs" />
+    <Compile Include="Model\PlayingCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Suit.cs" />
     <EmbeddedResource Include="Properties\BlackjackSimulator.Abstractions.rd.xml" />

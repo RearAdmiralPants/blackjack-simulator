@@ -3,6 +3,7 @@
     using System;
     using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
     using BlackjackSimulator.Abstractions;
+    using BlackjackSimulator.Abstractions.Model;
     using System.Linq;
     using System.Collections.Generic;
 

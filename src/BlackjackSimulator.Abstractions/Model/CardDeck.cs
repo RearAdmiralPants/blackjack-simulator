@@ -1,4 +1,4 @@
-﻿namespace BlackjackSimulator.Abstractions
+﻿namespace BlackjackSimulator.Abstractions.Model
 {
     using System;
     using System.Collections.Generic;
