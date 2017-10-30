@@ -4,7 +4,7 @@
 
     public class PlayingCard : IEquatable<PlayingCard>
     {
-        public string Name { get; set; }
+        public CardName Name { get; set; }
 
         public Suit Suit { get; set; }
 

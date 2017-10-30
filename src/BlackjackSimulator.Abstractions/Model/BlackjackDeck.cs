@@ -86,91 +86,91 @@ namespace BlackjackSimulator.Abstractions.Model
             {
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Two",
+                    Name = CardName.Two,
                     Value = 2,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Three",
+                    Name = CardName.Three,
                     Value = 3,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Four",
+                    Name = CardName.Four,
                     Value = 4,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Five",
+                    Name = CardName.Five,
                     Value = 5,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Six",
+                    Name = CardName.Six,
                     Value = 6,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Seven",
+                    Name = CardName.Seven,
                     Value = 7,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Eight",
+                    Name = CardName.Eight,
                     Value = 8,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Nine",
+                    Name = CardName.Nine,
                     Value = 9,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Ten",
+                    Name = CardName.Ten,
                     Value = 10,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Jack",
+                    Name = CardName.Jack,
                     Value = 10,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Queen",
+                    Name = CardName.Queen,
                     Value = 10,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "King",
+                    Name = CardName.King,
                     Value = 10,
                     Suit = typedSuit
                 });
 
                 this.AddCardToEndOfDeck(new PlayingCard
                 {
-                    Name = "Ace",
+                    Name = CardName.Ace,
                     Value = 11,
                     Suit = typedSuit
                 });
