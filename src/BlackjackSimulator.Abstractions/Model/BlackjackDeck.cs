@@ -11,67 +11,6 @@ namespace BlackjackSimulator.Abstractions.Model
         public BlackjackDeck()
         {
             this.Initialize();
-            /*
-            //// TODO: Turn this stuff into unit tests before getting further into these bad habits
-            this.Initialize();
-            var allCards = this.GetAllRemainingCards();
-            System.Diagnostics.Debug.WriteLine("Cards in deck (unshuffled): " + allCards.Count);
-            foreach (var card in allCards)
-            {
-                System.Diagnostics.Debug.WriteLine("Card: " + card.Name + " of " + card.Suit.ToString());
-            }
-
-            this.ResetDeck();
-
-            this.Initialize();
-            this.Shuffle();
-            System.Diagnostics.Debug.WriteLine("Cards in deck (unshuffled): " + allCards.Count);
-            for (var iterTest = 0; iterTest < 14; iterTest++) {
-                try
-                {
-                    var fiveCards = this.GetCards(5);
-                    System.Diagnostics.Debug.WriteLine("FIVE CARDS:");
-                    foreach (var card in fiveCards)
-                    {
-                        System.Diagnostics.Debug.WriteLine("Card: " + card.Name + " of " + card.Suit.ToString());
-                    }
-                }
-                catch (Exceptions.NotEnoughCardsRemainingException)
-                {
-                    System.Diagnostics.Debug.WriteLine("Not enough cards remain in deck to retrieve 5 cards (" + this.CardsRemaining + " remain)");
-                    var remainder = this.GetAllRemainingCards();
-                    foreach (var card in remainder)
-                    {
-                        System.Diagnostics.Debug.WriteLine("Remaining: " + card.Name + " of " + card.Suit.ToString());
-                    }
-                    iterTest = 20;
-                }
-            }
-
-            PlayingCard toTest = null;
-            var sameCard = 0;
-            for (var iterRand = 0; iterRand < 1000; iterRand++)
-            {
-                this.ResetDeck();
-                this.Initialize();
-                this.Shuffle();
-
-                var firstCard = this.GetCards(1);
-                if (toTest == null)
-                {
-                    toTest = firstCard[0];
-                }
-                else
-                {
-                    if (toTest.Equals(firstCard[0]))
-                    {
-                        sameCard++;
-                    }
-                }
-            }
-
-            System.Diagnostics.Debug.WriteLine("After 1,000 shuffles, we saw the same first card (" + toTest.ToString() + ") " + sameCard + " times.");
-            */
         }
 
         public void Reset()
@@ -174,8 +113,6 @@ namespace BlackjackSimulator.Abstractions.Model
                     Value = 11,
                     Suit = typedSuit
                 });
-
-                this.SetMaxPenetration();
             }
         }
     }
