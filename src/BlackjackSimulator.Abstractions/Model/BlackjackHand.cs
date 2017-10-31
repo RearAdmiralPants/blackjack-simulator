@@ -14,6 +14,11 @@
         //// TODO: Can this be unordered? E.g. HashSet?
         public EventList<PlayingCard> Cards { get; private set; } = new EventList<PlayingCard>();
 
+        /// <summary>
+        /// Gets the valid values of the current hand. If there are no aces in the hand, there will only
+        /// be one value. The number of values in this collection is equal to the number of aces in the hand
+        /// plus one.
+        /// </summary>
         public HashSet<int> Values { get; private set; } = new HashSet<int>();
 
         public BlackjackHand()
@@ -31,6 +36,9 @@
             return (this.Values.Count == 1);
         }
 
+        /// <summary>
+        /// Calculates the <see cref="Values"/> property of the current <see cref="BlackjackHand"/>.
+        /// </summary>
         private void CalculateValues()
         {
             this.Values.Clear();

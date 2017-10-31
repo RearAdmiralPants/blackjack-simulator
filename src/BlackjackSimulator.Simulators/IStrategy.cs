@@ -17,6 +17,17 @@
         /// <param name="knownCard"></param>
         void SetKnownCard(PlayingCard knownCard);
 
+        /// <summary>
+        /// Sets the current hands dealt to the player and the dealer.
+        /// </summary>
+        /// <param name="playerHand"></param>
+        /// <param name="dealerHand"></param>
+        void SetCurrentHand(BlackjackHand playerHand, BlackjackHand dealerHand);
+
+        /// <summary>
+        /// Gets the action that the player should take given the streategy.
+        /// </summary>
+        /// <returns></returns>
         BlackjackAction GetNextAction();
 
 
