@@ -15,12 +15,25 @@
         /// <summary>
         ///  Gets the current player's hand
         /// </summary>
-        public BlackjackHand PlayerHand { get; private set; }
+        public BlackjackHand PlayerHand { get; set; }
 
         /// <summary>
         /// Gets the current dealer's hand
         /// </summary>
-        public BlackjackHand DealerHand { get; private set; }
+        public BlackjackHand DealerHand { get; set; }
+
+        public BlackjackRules Rules { get; set; }
+
+        /// <summary>
+        /// Gets the list of known cards. Basic strategy has no memory.
+        /// </summary>
+        public List<PlayingCard> KnownCards
+        {
+            get
+            {
+                return new List<PlayingCard>();
+            }
+        }
 
         /// <summary>
         /// Gets the next action that the player will take using this strategy.
@@ -30,19 +43,6 @@
         {
             throw new NotImplementedException();
         }
-
-        public void SetCurrentHand(BlackjackHand playerHand, BlackjackHand dealerHand)
-        {
-            this.PlayerHand = playerHand;
-            this.DealerHand = dealerHand;
-        }
-
-        public void SetKnownCard(PlayingCard knownCard)
-        {
-            // Basic strategy doesn't care about history
-            return;
-        }
-
     }
 
 }

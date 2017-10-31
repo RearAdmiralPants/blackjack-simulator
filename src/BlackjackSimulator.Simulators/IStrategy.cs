@@ -11,25 +11,30 @@
     {
         //// TODO: Continue consideration of this implementation
 
-        /// <summary>
-        /// Sets a card that the player is aware has already been played.
-        /// </summary>
-        /// <param name="knownCard"></param>
-        void SetKnownCard(PlayingCard knownCard);
+            /// <summary>
+            /// Get the cards that the player knows he's seen and have been played.
+            /// </summary>
+        List<PlayingCard> KnownCards { get; }
 
         /// <summary>
-        /// Sets the current hands dealt to the player and the dealer.
+        /// Gets or sets the current player's hand.
         /// </summary>
-        /// <param name="playerHand"></param>
-        /// <param name="dealerHand"></param>
-        void SetCurrentHand(Abstractions.Model.BlackjackHand playerHand, Abstractions.Model.BlackjackHand dealerHand);
+        Abstractions.Model.BlackjackHand PlayerHand { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current dealer's hand.
+        /// </summary>
+        Abstractions.Model.BlackjackHand DealerHand { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current rule set.
+        /// </summary>
+        BlackjackRules Rules { get; set; }
 
         /// <summary>
         /// Gets the action that the player should take given the streategy.
         /// </summary>
         /// <returns></returns>
         BlackjackAction GetNextAction();
-
-
     }
 }
