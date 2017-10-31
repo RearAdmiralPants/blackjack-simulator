@@ -108,11 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackjackAceValue.cs" />
-    <Compile Include="BlakcjackAction.cs" />
+    <Compile Include="BlackjackAction.cs" />
     <Compile Include="CardName.cs" />
     <Compile Include="EventList.cs" />
     <Compile Include="Model\BlackjackDeck.cs" />
     <Compile Include="Model\BlackjackHand.cs" />
+    <Compile Include="Model\BlackjackShoe.cs" />
     <Compile Include="Model\CardDeck.cs" />
     <Compile Include="BlackjackDecorations.cs" />
     <Compile Include="Exceptions\NotEnoughCardsRemainingException.cs" />

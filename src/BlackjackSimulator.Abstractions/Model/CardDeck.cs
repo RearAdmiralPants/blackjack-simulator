@@ -12,7 +12,7 @@
     {
         private int totalCards = 0;
 
-        private List<PlayingCard> Cards = new List<PlayingCard>();
+        public List<PlayingCard> Cards { get; private set; } = new List<PlayingCard>();
 
         protected void ResetDeck()
         {

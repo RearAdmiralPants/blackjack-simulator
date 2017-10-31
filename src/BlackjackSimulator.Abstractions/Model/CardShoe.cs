@@ -18,21 +18,17 @@ namespace BlackjackSimulator.Abstractions.Model
 
         public int TotalDecks { get; private set; }
 
-        public List<PlayingCard> Cards { get; private set; } = new List<PlayingCard>();
+        protected List<PlayingCard> Cards = new List<PlayingCard>();
 
         public CardShoe(int totalDecks)
         {
             this.TotalDecks = totalDecks;
         }
 
-        public void Initialize()
-        {
-            for (var iterDecks = 0; iterDecks < this.TotalDecks; iterDecks++)
-            {
-
-            }
-        }
-
+        /// <summary>
+        /// Gets or sets a value indicating how deeply in the shoe the shoe will end. The value should be the index of the card in the shoe
+        /// at which the shoe will end (any cards of a higher index will not be used and thus ignored).
+        /// </summary>
         public int Penetration
         {
             get
@@ -94,8 +90,6 @@ namespace BlackjackSimulator.Abstractions.Model
 
             return retrievedCards;
         }
-
-
 
         public List<PlayingCard> GetAllRemainingCards()
         {

@@ -31,9 +31,6 @@ namespace BlackjackSimulator.UI
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            var deck = new BlackjackDeck();
-            deck.Shuffle();
-
 
         }
     }

@@ -114,6 +114,8 @@ namespace BlackjackSimulator.Abstractions.Model
                     Suit = typedSuit
                 });
             }
+
+            this.CompleteInitialAddingCards();
         }
     }
 }

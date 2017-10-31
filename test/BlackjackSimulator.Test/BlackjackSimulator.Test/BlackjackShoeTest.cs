@@ -8,7 +8,7 @@
     using System.Collections.Generic;
 
     [TestClass]
-    public class BlackjackDeckTest
+    public class BlackjackShoeTest
     {
         private const int SHUFFLE_CARDS_TO_TEST = 5;
         private const int SHUFFLES_TO_TEST_RANDOMNESS = 10000;
@@ -21,11 +21,11 @@
         /// ////TODO: Find a fix for the above NOTE.
         /// </summary>
         [TestMethod]
-        public void DeckShuffle_CardChanges()
+        public void ShoeShuffle_CardChanges()
         {
             // Create a new deck, and look at the first card
-            var newDeck = new BlackjackDeck();
-            var firstCardsUnshuffled = newDeck.PeekCards(0, SHUFFLE_CARDS_TO_TEST);
+            var newShoe = new BlackjackShoe(8);
+            var firstCardsUnshuffled = newShoe.PeekCards(0, SHUFFLE_CARDS_TO_TEST);
             var unshuffledTest = new List<PlayingCard>();
             var shuffledTest = new List<PlayingCard>();
 
@@ -41,8 +41,8 @@
             }
 
             // Shuffle the deck
-            newDeck.Shuffle();
-            var firstCardsShuffled = newDeck.PeekCards(0, SHUFFLE_CARDS_TO_TEST);
+            newShoe.Shuffle();
+            var firstCardsShuffled = newShoe.PeekCards(0, SHUFFLE_CARDS_TO_TEST);
             Assert.IsNotNull(firstCardsShuffled);
             Assert.AreEqual(firstCardsShuffled.Count, SHUFFLE_CARDS_TO_TEST);
             foreach (var shuffled in firstCardsShuffled)
@@ -72,24 +72,24 @@
         /// ////TODO: Find a fix for the above NOTE.
         /// </summary>
         [TestMethod]
-        public void DeckShuffle_CardFrequency()
+        public void ShoeShuffle_CardFrequency()
         {
-            var deck = new BlackjackDeck();
+            var shoe = new BlackjackShoe(8);
             double matchCount = 0;
 
-            deck.Shuffle();
-            var firstCard = deck.PeekCards(0, 1).FirstOrDefault();
+            shoe.Shuffle();
+            var firstCard = shoe.PeekCards(0, 1).FirstOrDefault();
             // Make sure we have an actual card
             Assert.IsNotNull(firstCard);
             Assert.IsFalse(firstCard == default(PlayingCard));
 
             for (var iterTest = 0; iterTest < SHUFFLES_TO_TEST_RANDOMNESS; iterTest++)
             {
-                deck.Reset();
+                shoe.Reset();
                 
-                deck.Shuffle();
+                shoe.Shuffle();
 
-                var cardTest = deck.PeekCards(0, 1).FirstOrDefault();
+                var cardTest = shoe.PeekCards(0, 1).FirstOrDefault();
                 if (cardTest.Equals(firstCard))
                 {
                     matchCount++;
