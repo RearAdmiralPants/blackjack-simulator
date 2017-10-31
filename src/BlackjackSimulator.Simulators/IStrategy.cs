@@ -22,7 +22,7 @@
         /// </summary>
         /// <param name="playerHand"></param>
         /// <param name="dealerHand"></param>
-        void SetCurrentHand(BlackjackHand playerHand, BlackjackHand dealerHand);
+        void SetCurrentHand(Abstractions.Model.BlackjackHand playerHand, Abstractions.Model.BlackjackHand dealerHand);
 
         /// <summary>
         /// Gets the action that the player should take given the streategy.

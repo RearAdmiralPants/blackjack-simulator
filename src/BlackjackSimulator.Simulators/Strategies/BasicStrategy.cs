@@ -12,19 +12,37 @@
     /// </summary>
     public class BasicStrategy : IStrategy
     {
+        /// <summary>
+        ///  Gets the current player's hand
+        /// </summary>
+        public BlackjackHand PlayerHand { get; private set; }
+
+        /// <summary>
+        /// Gets the current dealer's hand
+        /// </summary>
+        public BlackjackHand DealerHand { get; private set; }
+
+        /// <summary>
+        /// Gets the next action that the player will take using this strategy.
+        /// </summary>
+        /// <returns>The next <see cref="BlackjackAction"/> the player should perform using this strategy.</returns>
         public BlackjackAction GetNextAction()
         {
             throw new NotImplementedException();
         }
 
-        public void SetCurrentHand(Simulators.BlackjackHand playerHand, Simulators.BlackjackHand dealerHand)
+        public void SetCurrentHand(BlackjackHand playerHand, BlackjackHand dealerHand)
         {
-            throw new NotImplementedException();
+            this.PlayerHand = playerHand;
+            this.DealerHand = dealerHand;
         }
 
         public void SetKnownCard(PlayingCard knownCard)
         {
-            throw new NotImplementedException();
+            // Basic strategy doesn't care about history
+            return;
         }
+
     }
+
 }
