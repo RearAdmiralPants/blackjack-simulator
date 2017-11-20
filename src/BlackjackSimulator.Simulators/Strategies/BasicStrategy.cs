@@ -13,7 +13,7 @@
     public class BasicStrategy : IStrategy
     {
         /// <summary>
-        ///  Gets the current player's hand
+        /// Gets the current player's hand
         /// </summary>
         public BlackjackHand PlayerHand { get; set; }
 
@@ -41,7 +41,15 @@
         /// <returns>The next <see cref="BlackjackAction"/> the player should perform using this strategy.</returns>
         public BlackjackAction GetNextAction()
         {
-            throw new NotImplementedException();
+            var consideredDealerValue = this.DealerHand.Values.FirstOrDefault();
+            var consideredPlayerValue = this.PlayerHand.Values.FirstOrDefault();
+
+            if (this.DealerHand.Values.Count > 1)
+            {
+               
+            }
+
+            throw new NotImplementedException("Not implemented yet.");
         }
     }
 

@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="BlackjackAceValue.cs" />
     <Compile Include="BlackjackAction.cs" />
+    <Compile Include="Model\BlackjackRules.cs" />
     <Compile Include="CardName.cs" />
     <Compile Include="EventList.cs" />
     <Compile Include="Model\BlackjackDeck.cs" />

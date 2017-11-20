@@ -11,9 +11,9 @@
     {
         //// TODO: Continue consideration of this implementation
 
-            /// <summary>
-            /// Get the cards that the player knows he's seen and have been played.
-            /// </summary>
+        /// <summary>
+        /// Get the cards that the player knows he's seen and have been played.
+        /// </summary>
         List<PlayingCard> KnownCards { get; }
 
         /// <summary>
