@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BlackjackSimulator.Simulators.Rules
+﻿namespace BlackjackSimulator.Simulators.Rules
 {
+    using System.Collections.Generic;
+
+    /// <inheritdoc />
     public class SandsBethlehem : IBlackjackRules
     {
         public int AcesCanBeSplitInARow
@@ -56,7 +53,7 @@ namespace BlackjackSimulator.Simulators.Rules
             }
         }
 
-        public int NumberOfShoes
+        public int NumberOfDecks
         {
             get
             {
@@ -72,11 +69,11 @@ namespace BlackjackSimulator.Simulators.Rules
             }
         }
 
-        public bool SurrenderAllowed
+        public decimal SurrenderValue
         {
             get
             {
-                return true;
+                return 0.5M;
             }
         }
     }
