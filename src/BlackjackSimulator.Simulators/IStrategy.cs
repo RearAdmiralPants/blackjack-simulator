@@ -29,7 +29,7 @@
         /// <summary>
         /// Gets or sets the current rule set.
         /// </summary>
-        BlackjackRules Rules { get; set; }
+        IBlackjackRules Rules { get; set; }
 
         /// <summary>
         /// Gets the action that the player should take given the streategy.

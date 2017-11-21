@@ -21,9 +21,22 @@
         /// </summary>
         public HashSet<int> Values { get; private set; } = new HashSet<int>();
 
+        /// <summary>
+        /// Gets or sets the bet of this hand. Only valid for player hands; dealers do not bet.
+        /// </summary>
+        public decimal Bet { get; set; }
+
         public BlackjackHand()
         {
             this.Cards.ItemAdded += Cards_ItemAdded;
+        }
+
+        public bool IsSplittable
+        {
+            get
+            {
+                return this.Cards.Count == 2 && this.Cards[0].Name == this.Cards[1].Name;
+            }
         }
 
         private void Cards_ItemAdded(object sender, EventArgs e)
