@@ -1,0 +1,12 @@
+﻿{
+  "2": {
+    "soft": true,
+    "value": 4,
+    "action": "Hit"
+  },
+  "3": {
+    "soft": true,
+    "value": 5,
+    "action": "Hit"
+  }
+}

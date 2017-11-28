@@ -2,9 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using BlackjackSimulator.Abstractions.Model;
 
     /// <summary>
@@ -23,6 +20,12 @@
         public BlackjackHand DealerHand { get; set; }
 
         public IBlackjackRules Rules { get; set; }
+
+        /// <summary>
+        /// Stores the assocation between the dealer's face-up card (11 is ace), the player's hand, and the action that
+        /// should be performed.
+        /// </summary>
+        private Dictionary<int, Dictionary<BlackjackHand, BlackjackAction>> strategyData = new Dictionary<int, Dictionary<BlackjackHand, BlackjackAction>>();
 
         /// <summary>
         /// Gets the list of known cards. Basic strategy has no memory.
@@ -72,6 +75,8 @@
             {
                 return BlackjackAction.Hit;
             }
+
+
 
             /*
             switch (this.Rules.DealerHitsSoft17)
