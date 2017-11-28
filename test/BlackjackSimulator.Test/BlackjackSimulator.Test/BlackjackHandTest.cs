@@ -35,16 +35,69 @@
             hand.Cards.Add(firstCard);
             hand.Cards.Add(secondCard);
 
-            var expectedValues = new HashSet<int>();
-            expectedValues.Add(19);
-            expectedValues.Add(9);
+            Assert.AreEqual(hand.Value, 19);
+            Assert.IsTrue(hand.IsSoft);
+        }
 
-            foreach (var value in hand.Values)
+        [TestMethod]
+        public void BlackjackHands_CorrectProperties()
+        {
+            var first = new PlayingCard
             {
-                expectedValues.Remove(value);
-            }
+                Suit = Suit.Clubs,
+                Name = CardName.Five,
+                Value = 5
+            };
 
-            Assert.AreEqual(expectedValues.Count, 0);
+            var second = new PlayingCard
+            {
+                Suit = Suit.Clubs,
+                Name = CardName.Ace,
+                Value = 11
+            };
+
+            var third = new PlayingCard
+            {
+                Suit = Suit.Hearts,
+                Name = CardName.Ace,
+                Value = 11
+            };
+
+            var fourth = new PlayingCard
+            {
+                Suit = Suit.Diamonds,
+                Name = CardName.Ace,
+                Value = 11
+            };
+
+            var fifth = new PlayingCard
+            {
+                Suit = Suit.Spades,
+                Name = CardName.Queen,
+                Value = 10
+            };
+
+            var hand = new BlackjackHand();
+            hand.Cards.Add(second);
+            hand.Cards.Add(third);
+
+            Assert.AreEqual(hand.Value, 12);
+            Assert.IsTrue(hand.IsSoft);
+
+            hand.Cards.Add(fourth);
+
+            Assert.AreEqual(hand.Value, 13);
+            Assert.IsTrue(hand.IsSoft);
+
+            hand.Cards.Add(first);
+
+            Assert.AreEqual(hand.Value, 18);
+            Assert.IsTrue(hand.IsSoft);
+
+            hand.Cards.Add(fifth);
+
+            Assert.AreEqual(hand.Value, 18);
+            Assert.IsFalse(hand.IsSoft);            
         }
     }
 }

@@ -73,6 +73,7 @@
                 return BlackjackAction.Hit;
             }
 
+            /*
             switch (this.Rules.DealerHitsSoft17)
             {
                 case true:
@@ -129,25 +130,10 @@
                 default:        // False
                     break;
             }
+            */
 
             throw new NotImplementedException("Not implemented yet.");
         }
-
-        /*
-        private void CalculateConsideredValues()
-        {
-            if (this.DealerHand.Values.Count > 1)
-            {
-                if (this.Rules.DealerHitsSoft17)
-                {
-                    if (this.DealerHand.Values.Contains(17))
-                    {
-                        this.consideredDealerValue = 17;
-                    }
-                }
-            }
-        }
-        */
     }
 
 }

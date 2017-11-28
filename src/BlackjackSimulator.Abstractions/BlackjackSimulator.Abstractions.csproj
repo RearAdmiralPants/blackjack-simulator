@@ -109,7 +109,7 @@
   <ItemGroup>
     <Compile Include="BlackjackAceValue.cs" />
     <Compile Include="BlackjackAction.cs" />
-    <Compile Include="Model\BlackjackRules.cs" />
+    <Compile Include="IBlackjackRules.cs" />
     <Compile Include="CardName.cs" />
     <Compile Include="EventList.cs" />
     <Compile Include="Model\BlackjackDeck.cs" />
@@ -119,7 +119,9 @@
     <Compile Include="BlackjackDecorations.cs" />
     <Compile Include="Exceptions\NotEnoughCardsRemainingException.cs" />
     <Compile Include="Model\CardShoe.cs" />
+    <Compile Include="Model\PlayerTurn.cs" />
     <Compile Include="Model\PlayingCard.cs" />
+    <Compile Include="Model\Rules\SandsBethlehem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Suit.cs" />
     <EmbeddedResource Include="Properties\BlackjackSimulator.Abstractions.rd.xml" />

@@ -60,7 +60,7 @@
         {
             var lowestValue = 0;
             var highestValue = 0;
-            var hasAce = false;
+            var aces = 0;
 
             foreach (var card in this.Cards)
             {
@@ -73,11 +73,11 @@
                 {
                     lowestValue++;
                     highestValue += 11;
-                    hasAce = true;
+                    aces++;
                 }
             }
 
-            if (!hasAce)
+            if (aces == 0)
             {
                 this.Value = highestValue;
                 this.IsSoft = false;
@@ -91,8 +91,18 @@
                 return;
             }
 
-            this.Value = lowestValue;
-            this.IsSoft = false;
+            while (aces > 0)
+            {
+                highestValue = highestValue - 10;
+                aces--;
+
+                if (highestValue <= 21)
+                {
+                    this.IsSoft = aces > 0;
+                    this.Value = highestValue;
+                    break;
+                }
+            }
             
             /*
             this.Values.Clear();
