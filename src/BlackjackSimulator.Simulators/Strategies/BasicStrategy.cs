@@ -66,7 +66,6 @@
                 return BlackjackAction.Hit;
             }
 
-
             throw new NotImplementedException("Not implemented yet.");
         }
 
