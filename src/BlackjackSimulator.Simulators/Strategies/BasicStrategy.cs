@@ -12,9 +12,6 @@
     /// </summary>
     public class BasicStrategy : IStrategy
     {
-        private int consideredPlayerValue;
-        private int consideredDealerValue;
-
         /// <summary>
         /// Gets the current player's hand
         /// </summary>
@@ -45,6 +42,16 @@
         //// TODO: Verify these actions with basic strategy cards.
         public BlackjackAction GetNextAction()
         {
+            if (this.Rules.NumberOfDecks >= 4)
+            {
+                return this.GetNextAction_FourOrMoreDecks();
+            }
+
+            throw new NotImplementedException("Not implemented yet.");
+        }
+
+        private BlackjackAction GetNextAction_FourOrMoreDecks()
+        {
             // First, special cases
 
             // Always split aces (?)
@@ -54,21 +61,79 @@
             }
 
             // Always stand on 21
-            if (this.consideredPlayerValue == 21)
+            if (this.PlayerHand.Value == 21)
             {
                 return BlackjackAction.Stand;
             }
 
             // Next, more general cases
             // Always hit with 11 or less
-            if (this.consideredPlayerValue <= 11)
+            if (this.PlayerHand.Value <= 11 && !this.PlayerHand.IsSoft)
             {
                 return BlackjackAction.Hit;
+            }
+
+            switch (this.Rules.DealerHitsSoft17)
+            {
+                case true:
+                    switch (this.PlayerHand.IsSoft)
+                    {
+                        case true:
+                            switch (this.PlayerHand.Value)
+                            {
+                                case 4:
+                                case 5:
+                                case 6:
+                                case 7:
+                                case 8:
+                                    switch (this.DealerHand.DealerVisibleCard.Value)
+                                    {
+                                        case 2:
+                                        case 3:
+                                        case 4:
+                                            return BlackjackAction.Hit;
+                                            break;
+                                        case 5:
+                                        case 6:
+                                            return BlackjackAction.DoubleDown;
+                                            break;
+                                        case 7:
+                                        case 8:
+                                        case 9:
+                                        case 10:
+                                        case 11:
+                                            break;
+                                    }
+                                    break;
+                            }
+                            break;
+
+                        default:        // False
+                            break;
+                    }
+
+                    break;
+                default:        // False
+                    break;
+            }
+            switch (this.PlayerHand.IsSoft)
+            {
+                case true:
+                    switch (this.PlayerHand.Value)
+                    {
+                        case 2:
+                            break;
+                    }
+                    break;
+
+                default:        // False
+                    break;
             }
 
             throw new NotImplementedException("Not implemented yet.");
         }
 
+        /*
         private void CalculateConsideredValues()
         {
             if (this.DealerHand.Values.Count > 1)
@@ -82,6 +147,7 @@
                 }
             }
         }
+        */
     }
 
 }

@@ -4,10 +4,19 @@
 
     public class PlayingCard : IEquatable<PlayingCard>
     {
+        /// <summary>
+        /// Gets or sets the name of the card.
+        /// </summary>
         public CardName Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the suit of the card.
+        /// </summary>
         public Suit Suit { get; set; }
 
+        /// <summary>
+        /// Gets or sets the value of the card.
+        /// </summary>
         public int Value { get; set; }
 
         /// <summary>

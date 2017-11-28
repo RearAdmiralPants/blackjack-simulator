@@ -15,11 +15,20 @@
         public EventList<PlayingCard> Cards { get; private set; } = new EventList<PlayingCard>();
 
         /// <summary>
-        /// Gets the valid values of the current hand. If there are no aces in the hand, there will only
-        /// be one value. The number of values in this collection is equal to the number of aces in the hand
-        /// plus one.
+        /// Gets or sets the visible card if this is the dealer's hand.
         /// </summary>
-        public HashSet<int> Values { get; private set; } = new HashSet<int>();
+        public PlayingCard DealerVisibleCard { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value of the hand.
+        /// </summary>
+        public int Value { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the value of the hand is soft (contains one or more aces such that the hand could
+        /// be considered to have a value of n - 10 where n is the <see cref="Value"/> of the hand).
+        /// </summary>
+        public bool IsSoft { get; set; } = false;
 
         /// <summary>
         /// Gets or sets the bet of this hand. Only valid for player hands; dealers do not bet.
@@ -44,16 +53,48 @@
             this.CalculateValues();
         }
 
-        public bool SingleValue()
-        {
-            return (this.Values.Count == 1);
-        }
-
         /// <summary>
         /// Calculates the <see cref="Values"/> property of the current <see cref="BlackjackHand"/>.
         /// </summary>
         private void CalculateValues()
         {
+            var lowestValue = 0;
+            var highestValue = 0;
+            var hasAce = false;
+
+            foreach (var card in this.Cards)
+            {
+                if (card.Name != CardName.Ace)
+                {
+                    lowestValue += card.Value;
+                    highestValue += card.Value;
+                }
+                else
+                {
+                    lowestValue++;
+                    highestValue += 11;
+                    hasAce = true;
+                }
+            }
+
+            if (!hasAce)
+            {
+                this.Value = highestValue;
+                this.IsSoft = false;
+                return;
+            }
+
+            if (highestValue <= 21)
+            {
+                this.Value = highestValue;
+                this.IsSoft = true;
+                return;
+            }
+
+            this.Value = lowestValue;
+            this.IsSoft = false;
+            
+            /*
             this.Values.Clear();
 
             var aces = 0;
@@ -87,6 +128,7 @@
                 this.Values.Add(newValue);
                 aces--;
             }
+            */
         }
     }
 }
