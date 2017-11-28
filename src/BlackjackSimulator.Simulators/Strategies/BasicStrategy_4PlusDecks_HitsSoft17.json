@@ -1,0 +1,286 @@
+﻿{
+  "2": [
+      {
+        "soft": false,
+        "value": 4,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 5,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 6,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 7,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 8,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 9,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 10,
+        "action": "DH"
+      },
+      {
+        "soft": false,
+        "value": 11,
+        "action": "DH"
+      },
+      {
+        "soft": false,
+        "value": 12,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 13,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 14,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 15,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 16,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 17,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 18,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 19,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 20,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 21,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 12,
+        "action": "DD"
+      },
+      {
+        "soft": true,
+        "value": 13,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 14,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 15,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 16,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 17,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 18,
+        "action": "DS"
+      },
+      {
+        "soft": true,
+        "value": 19,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 20,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 21,
+        "action": "S"
+      }
+    ],
+  "3": [
+      {
+        "soft": false,
+        "value": 4,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 5,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 6,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 7,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 8,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 9,
+        "action": "DH"
+      },
+      {
+        "soft": false,
+        "value": 10,
+        "action": "DH"
+      },
+      {
+        "soft": false,
+        "value": 11,
+        "action": "DH"
+      },
+      {
+        "soft": false,
+        "value": 12,
+        "action": "H"
+      },
+      {
+        "soft": false,
+        "value": 13,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 14,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 15,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 16,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 17,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 18,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 19,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 20,
+        "action": "S"
+      },
+      {
+        "soft": false,
+        "value": 21,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 12,
+        "action": "DD"
+      },
+      {
+        "soft": true,
+        "value": 13,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 14,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 15,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 16,
+        "action": "H"
+      },
+      {
+        "soft": true,
+        "value": 17,
+        "action": "DH"
+      },
+      {
+        "soft": true,
+        "value": 18,
+        "action": "DS"
+      },
+      {
+        "soft": true,
+        "value": 19,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 20,
+        "action": "S"
+      },
+      {
+        "soft": true,
+        "value": 21,
+        "action": "S"
+      }
+    ]
+}
