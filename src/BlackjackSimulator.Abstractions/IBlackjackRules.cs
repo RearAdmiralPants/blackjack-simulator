@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BlackjackSimulator.Abstractions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Model;
+
     public interface IBlackjackRules
     {
         /// <summary>
@@ -58,5 +60,10 @@ namespace BlackjackSimulator.Abstractions
         /// Gets a value indicating how many decks are in a shoe.
         /// </summary>
         int NumberOfDecks { get; }
+
+        bool CanDouble(BlackjackHand currentHand);
+
+        bool CanSplit(BlackjackHand currentHand);
+
     }
 }

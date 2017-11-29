@@ -31,6 +31,12 @@
         public bool IsSoft { get; set; } = false;
 
         /// <summary>
+        /// Gets or sets a reference to the <see cref="BlackjackHand"/> from which this hand was split.
+        /// </summary>
+        ////TODO: Think further on this implementation. May instead want to use BlackjackSimulator.Simulators.BlackjackHand.
+        public BlackjackHand SplitParent { get; set; }
+
+        /// <summary>
         /// Gets or sets the bet of this hand. Only valid for player hands; dealers do not bet.
         /// </summary>
         public decimal Bet { get; set; }
@@ -50,13 +56,13 @@
 
         private void Cards_ItemAdded(object sender, EventArgs e)
         {
-            this.CalculateValues();
+            this.CalculateValue();
         }
 
         /// <summary>
-        /// Calculates the <see cref="Values"/> property of the current <see cref="BlackjackHand"/>.
+        /// Calculates the <see cref="Value"/> property of the current <see cref="BlackjackHand"/>.
         /// </summary>
-        private void CalculateValues()
+        private void CalculateValue()
         {
             var lowestValue = 0;
             var highestValue = 0;

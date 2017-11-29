@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using BlackjackSimulator.Abstractions.Model;
+    using BlackjackSimulator.Abstractions;
 
     public interface IStrategy
     {

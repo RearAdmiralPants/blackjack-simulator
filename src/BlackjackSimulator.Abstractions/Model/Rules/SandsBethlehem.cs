@@ -76,5 +76,20 @@
                 return 0.5M;
             }
         }
+
+        public bool CanDouble(BlackjackHand currentHand)
+        {
+            return true;
+        }
+
+        public bool CanSplit(BlackjackHand currentHand)
+        {
+            if (currentHand.SplitParent == null)
+            {
+                return true;
+            }
+
+            return !(currentHand.SplitParent.Cards[0].Name == CardName.Ace && currentHand.SplitParent.Cards[1].Name == CardName.Ace);
+        }
     }
 }

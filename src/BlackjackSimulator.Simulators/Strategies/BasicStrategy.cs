@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using BlackjackSimulator.Abstractions;
     using BlackjackSimulator.Abstractions.Model;
 
     /// <summary>

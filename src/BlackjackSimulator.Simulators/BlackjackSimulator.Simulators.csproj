@@ -105,10 +105,11 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="project.json" />
+    <None Include="Strategies\BasicStrategy_4PlusDecks_HitsSoft17.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlackjackActionFactory.cs" />
     <Compile Include="BlackjackHand.cs" />
-    <Compile Include="IBlackjackRules.cs" />
     <Compile Include="IStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\SandsBethlehem.cs" />
