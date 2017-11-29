@@ -112,7 +112,6 @@
     <Compile Include="BlackjackHand.cs" />
     <Compile Include="IStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rules\SandsBethlehem.cs" />
     <Compile Include="Strategies\BasicStrategy.cs" />
     <EmbeddedResource Include="Properties\BlackjackSimulator.Simulators.rd.xml" />
   </ItemGroup>

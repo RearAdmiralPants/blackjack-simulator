@@ -1,6 +1,7 @@
 ﻿namespace BlackjackSimulator.Simulators.Rules
 {
     using System.Collections.Generic;
+    using BlackjackSimulator.Abstractions;
 
     /// <inheritdoc />
     public class SandsBethlehem : IBlackjackRules
